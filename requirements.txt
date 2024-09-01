@@ -6,3 +6,5 @@ langchain_huggingface==0.0.3
 langchain_text_splitters==0.2.2
 Requests==2.32.3
 streamlit==1.38.0
+duckduckgo-search>=0.0.1
+pypdf>=3.9.1
