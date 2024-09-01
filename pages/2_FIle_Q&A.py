@@ -49,11 +49,13 @@ def load_files(file_paths):
 st.title('📝 File Q&A')
 st.caption("🚀 Chatbot powered by " + st.session_state.selected_model + " (" + get_owner(st.session_state.selected_model) + ")")
 
-def clear_chat():
+def clear_context():
     st.session_state.qna_messages = []
+    if 'chain' in st.session_state:
+        del st.session_state.chain  # Clear the old chain if it exists
 
-# File uploader
-uploaded_files = st.file_uploader("Upload PDF, TXT, or MD files", type=["pdf", "txt", "md"], accept_multiple_files=True, on_change=clear_chat())
+# File uploader with on_change callback to clear the context
+uploaded_files = st.file_uploader("Upload PDF, TXT, or MD files", type=["pdf", "txt", "md"], accept_multiple_files=True, on_change=clear_context)
 
 # Flag to check if any file is empty
 error_detected = False
