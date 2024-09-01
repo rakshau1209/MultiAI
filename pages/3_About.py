@@ -11,11 +11,11 @@ with st.sidebar:
 
 # About Chatbot
 st.title("💬 Chatbot")
-st.write("This is just a regular chatbot where you can interact with various **Large Language Models** (LLMs). Whether you want to ask questions, chat about random topics, or just explore what these models can do, this chatbot is here to help. It's a fun and simple way to see how LLMs handle different kinds of conversations.")
+st.write("This is just a regular chatbot where you can interact with various open source **Large Language Models** (LLMs). Whether you want to ask questions, chat about random topics, or just explore what these models can do, this chatbot is here to help. It's a fun and simple way to see how LLMs handle different kinds of conversations.")
 
 # About SearchBot
 st.title("🔎 SearchBot")
-st.write("SearchBot is a bit more advanced. It combines the power of LLMs with search tools, like DuckDuckGo's LangChain Python modules, to give you more accurate answers. The LLMs generate search queries, and then the results are used to build responses. Not all LLMs are great at using these search tools, so you might see some errors here and there. Below is a list of LLMs that most consistently perform well with the search tool:")
+st.write("SearchBot is a bit more advanced. It combines the power of LLMs with search tools, like DuckDuckGo's LangChain Python modules, to give you more accurate answers. The LLMs generate search queries, and then the results are used to build responses. Not all LLMs are great at using these search tools, so you might see some errors occasionally. Below is a list of LLMs that most consistently perform well with the search tool:")
 
 consistent_llms = ["llama3-70b-8192", "llama3-8b-8192", "gemma2-9b-it", "llama-3.1-70b-versatile", "mixtral-8x7b-32768"]
 
