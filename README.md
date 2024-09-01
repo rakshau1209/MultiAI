@@ -72,7 +72,7 @@ With the File Q&A feature, you can upload files in PDF, TXT, or Markdown (MD) fo
    ```bash
    cd MultiAI
    ```
-3. Install the requires libraries:
+3. Install the required libraries:
    ```bash
    pip install -r requirements.txt
    ```
