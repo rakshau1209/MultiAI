@@ -8,3 +8,4 @@ Requests==2.32.3
 streamlit==1.38.0
 duckduckgo-search>=0.0.1
 pypdf>=3.9.1
+faiss-cpu>=1.8.0.post1
