@@ -4,7 +4,12 @@ This app provides three main features: a standard Chatbot for general conversati
 
 **Explore MultiAI at:** https://multi-ai.streamlit.app/
 
-<img src="https://github.com/user-attachments/assets/7fa6d427-d0bc-4747-822a-cd743f607b8b" width="23%"></img> <img src="https://github.com/user-attachments/assets/d50add7d-b650-4ebc-9c35-74f817751066" width="23%"></img> <img src="https://github.com/user-attachments/assets/e7f62e3e-9b73-4b6b-b617-e8fae8970ea5" width="23%"></img> <img src="https://github.com/user-attachments/assets/3e88559b-1ed9-4544-965e-43687fb8a001" width="23%"></img> 
+<div align="center">
+
+![chatbot](https://github.com/user-attachments/assets/3c111c72-0ad2-427a-aa24-a0334da3a0db)
+![searchbot](https://github.com/user-attachments/assets/f5ecce3d-a19a-4181-a2e2-316a7721b7ba)
+
+</div>
 
 ## Features
 
