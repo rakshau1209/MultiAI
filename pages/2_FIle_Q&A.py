@@ -96,12 +96,12 @@ if error_detected:
     st.error("❗ One or more of the uploaded documents is empty. Please remove them and try again.")
     prompt = st.chat_input('Please remove the empty file(s) and upload valid ones.', disabled=True)
 elif uploaded_files:
-    prompt = st.chat_input('Ask a question about the uploaded file.', disabled=False)
+    prompt = st.chat_input('Ask a question about the uploaded file (max 500 characters).', disabled=False)
 else:
     prompt = st.chat_input('Please upload a file.', disabled=True)
 
-# If the user hits enter then
-if prompt:
+# Ensure the prompt is within the character limit
+if prompt and len(prompt) <= 500:
     # Display the prompt
     st.chat_message('user').markdown(prompt)
 
@@ -116,3 +116,5 @@ if prompt:
 
     # Store the LLM response in state
     st.session_state.qna_messages.append({'role': 'assistant', 'content': response})
+elif prompt and len(prompt) > 500:
+    st.warning("⚠️ Prompt exceeds the 500 character limit.")

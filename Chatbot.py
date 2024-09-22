@@ -26,10 +26,10 @@ for message in st.session_state.chatbot_messages:
     st.chat_message(message['role']).markdown(message['content'])
 
 # Prompt input template to display the prompts
-prompt = st.chat_input('Pass your prompt here.')
+prompt = st.chat_input('Pass your prompt here (max 500 characters).')
 
-# If the user hits enter then
-if prompt:
+# Ensure the prompt is within the character limit
+if prompt and len(prompt) <= 500:
     # Display the prompt
     st.chat_message('user').markdown(prompt)
     # Store user prompt in state
@@ -46,3 +46,5 @@ if prompt:
     st.chat_message('assistant').markdown(response)
     # Store the LLM response in state
     st.session_state.chatbot_messages.append({'role': 'assistant', 'content': response})
+elif prompt and len(prompt) > 500:
+    st.warning("⚠️ Prompt exceeds the 500 character limit.")

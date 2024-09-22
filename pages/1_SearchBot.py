@@ -33,10 +33,10 @@ for message in st.session_state.search_messages:
     st.chat_message(message['role']).markdown(message['content'])
 
 # Prompt input template to display the prompts
-prompt = st.chat_input('Ask me anything, I can search the web for you!')
+prompt = st.chat_input('Ask me anything, I can search the web for you (max 500 characters)!')
 
-# If the user hits enter then
-if prompt:
+# Ensure the prompt is within the character limit
+if prompt and len(prompt) <= 500:
     # Display the prompt
     st.chat_message('user').markdown(prompt)
     # Store user prompt in state
@@ -52,3 +52,5 @@ if prompt:
         response = search_agent.run(st.session_state.search_messages, callbacks=[st_cb])
         st.session_state.search_messages.append({"role": "assistant", "content": response})
         st.write(response)
+elif prompt and len(prompt) > 500:
+    st.warning("⚠️ Prompt exceeds the 500 character limit.")
